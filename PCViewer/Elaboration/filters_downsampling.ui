@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Filters_Downsampling</class>
+ <widget class="QWidget" name="Filters_Downsampling">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>274</width>
+    <height>243</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_11">
+     <item>
+      <widget class="QRadioButton" name="DownSampling_RandomSampling">
+       <property name="text">
+        <string>RandomSampling</string>
+       </property>
+       <attribute name="buttonGroup">
+        <string notr="true">Registration_ButtonGroup_DownSampling</string>
+       </attribute>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>(%)</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDoubleSpinBox" name="DownSampling_Random_Percent">
+       <property name="decimals">
+        <number>1</number>
+       </property>
+       <property name="value">
+        <double>50.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_8">
+     <item>
+      <widget class="QRadioButton" name="DownSampling_VoxelGrid">
+       <property name="text">
+        <string>VoxelGrid</string>
+       </property>
+       <attribute name="buttonGroup">
+        <string notr="true">Registration_ButtonGroup_DownSampling</string>
+       </attribute>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>(grid)</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDoubleSpinBox" name="DownSampling_VoxelGrid_Leaf">
+       <property name="decimals">
+        <number>3</number>
+       </property>
+       <property name="singleStep">
+        <double>0.001000000000000</double>
+       </property>
+       <property name="value">
+        <double>0.010000000000000</double>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QRadioButton" name="Keypoint_None">
+     <property name="text">
+      <string>No Keypoints</string>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">Registration_ButtonGroup_DownSampling</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_6">
+     <item>
+      <widget class="QRadioButton" name="Keypoint_BRISK">
+       <property name="text">
+        <string>BRISK</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+       <attribute name="buttonGroup">
+        <string notr="true">Registration_ButtonGroup_DownSampling</string>
+       </attribute>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>(Thresh)</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="Keypoint_BRISK_Threshold">
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="maximum">
+        <number>200</number>
+       </property>
+       <property name="value">
+        <number>60</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QRadioButton" name="Keypoint_BRISKQuad">
+       <property name="text">
+        <string>Brisk Quad</string>
+       </property>
+       <attribute name="buttonGroup">
+        <string notr="true">Registration_ButtonGroup_DownSampling</string>
+       </attribute>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_9">
+       <property name="text">
+        <string>(Octave)</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="Keypoint_BRISK_Octave">
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>10</number>
+       </property>
+       <property name="value">
+        <number>4</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_7">
+     <item>
+      <widget class="QRadioButton" name="Keypoint_AGAST">
+       <property name="text">
+        <string>AGAST</string>
+       </property>
+       <attribute name="buttonGroup">
+        <string notr="true">Registration_ButtonGroup_DownSampling</string>
+       </attribute>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_7">
+       <property name="text">
+        <string>(Thresh)</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="Keypoint_AGAST_Threshold">
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="value">
+        <number>30</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QRadioButton" name="Keypoint_SIFT3D">
+     <property name="text">
+      <string>SIFT3D</string>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">Registration_ButtonGroup_DownSampling</string>
+     </attribute>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>DownSampling_RandomSampling</tabstop>
+  <tabstop>DownSampling_Random_Percent</tabstop>
+  <tabstop>DownSampling_VoxelGrid</tabstop>
+  <tabstop>DownSampling_VoxelGrid_Leaf</tabstop>
+  <tabstop>Keypoint_None</tabstop>
+  <tabstop>Keypoint_BRISK</tabstop>
+  <tabstop>Keypoint_BRISK_Threshold</tabstop>
+  <tabstop>Keypoint_AGAST</tabstop>
+  <tabstop>Keypoint_AGAST_Threshold</tabstop>
+  <tabstop>Keypoint_SIFT3D</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>DownSampling_Random_Percent</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>DownSampling_RandomSampling</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>277</x>
+     <y>61</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>202</x>
+     <y>58</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>DownSampling_VoxelGrid_Leaf</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>DownSampling_VoxelGrid</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>277</x>
+     <y>96</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>149</x>
+     <y>93</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Keypoint_BRISK_Threshold</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>Keypoint_BRISK</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>277</x>
+     <y>159</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>106</x>
+     <y>156</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Keypoint_AGAST_Threshold</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>Keypoint_AGAST</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>277</x>
+     <y>194</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>106</x>
+     <y>191</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <buttongroups>
+  <buttongroup name="Registration_ButtonGroup_DownSampling"/>
+ </buttongroups>
+</ui>

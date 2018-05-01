@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>KinectTab</class>
+ <widget class="QWidget" name="KinectTab">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>331</width>
+    <height>529</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QFormLayout" name="formLayout">
+   <property name="fieldGrowthPolicy">
+    <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+   </property>
+   <item row="0" column="0">
+    <widget class="QGroupBox" name="groupBox_Device">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>306</width>
+       <height>99</height>
+      </size>
+     </property>
+     <property name="title">
+      <string>Device</string>
+     </property>
+     <layout class="QFormLayout" name="formLayout_2">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_Serial">
+        <property name="text">
+         <string>Serial: </string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_Firmware">
+        <property name="text">
+         <string>Firmware: </string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_Status">
+        <property name="text">
+         <string>Status: X - Disconnected</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QGroupBox" name="groupBox_Connection">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>306</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="title">
+      <string>Connection</string>
+     </property>
+     <layout class="QFormLayout" name="formLayout_3">
+      <property name="fieldGrowthPolicy">
+       <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+      </property>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="pushButton_Open">
+        <property name="text">
+         <string>Open Connection</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="pushButton_Close">
+        <property name="text">
+         <string>Close Connection</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" colspan="2">
+       <widget class="QPushButton" name="pushButton_Grab">
+        <property name="text">
+         <string>Grab Point Cloud</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" colspan="2">
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QRadioButton" name="rB_Pipeline_CPU">
+          <property name="text">
+           <string>CPU</string>
+          </property>
+          <attribute name="buttonGroup">
+           <string notr="true">buttonGroup_PipeLine</string>
+          </attribute>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="rB_Pipeline_GL">
+          <property name="text">
+           <string>GL</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+          <attribute name="buttonGroup">
+           <string notr="true">buttonGroup_PipeLine</string>
+          </attribute>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="rB_Pipeline_CL">
+          <property name="text">
+           <string>CL</string>
+          </property>
+          <attribute name="buttonGroup">
+           <string notr="true">buttonGroup_PipeLine</string>
+          </attribute>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="3" column="0">
+       <widget class="QRadioButton" name="radioButton_MilliMeter">
+        <property name="text">
+         <string>[mm]</string>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">buttonGroup_Unity</string>
+        </attribute>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QRadioButton" name="radioButton_Meter">
+        <property name="text">
+         <string>[m]</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">buttonGroup_Unity</string>
+        </attribute>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QGroupBox" name="groupBox_Pose">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>306</width>
+       <height>235</height>
+      </size>
+     </property>
+     <property name="title">
+      <string>Pose</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="2" column="1">
+       <widget class="QPushButton" name="pushButton_savePose">
+        <property name="text">
+         <string>Save Pose</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="pushButton_setPose">
+        <property name="text">
+         <string>Set Pose</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QSpinBox" name="spinBox_registerPose">
+        <property name="maximum">
+         <number>3</number>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QPushButton" name="pushButton_registerPose">
+        <property name="text">
+         <string>Register Pose</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QCheckBox" name="checkBox_Adafruit">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="text">
+         <string>Adafruit</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="pushButton_getPose">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Get Pose</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QPushButton" name="pushButton_RotationSensor_Init">
+        <property name="text">
+         <string>Init</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" colspan="2">
+       <widget class="TransformationMatrixSpinBox" name="TrasfMat" native="true"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="QPushButton" name="pushButton_resetPose">
+        <property name="text">
+         <string>Reset Pose</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QCheckBox" name="checkBox_myAHRS">
+        <property name="text">
+         <string>myAHRS+</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0">
+       <widget class="QCheckBox" name="checkBox_NexCave">
+        <property name="text">
+         <string>UseNexCave</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>TransformationMatrixSpinBox</class>
+   <extends>QWidget</extends>
+   <header>Widgets/transformationmatrixspinbox.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>rB_Pipeline_CPU</tabstop>
+  <tabstop>rB_Pipeline_GL</tabstop>
+  <tabstop>rB_Pipeline_CL</tabstop>
+  <tabstop>pushButton_Open</tabstop>
+  <tabstop>pushButton_Close</tabstop>
+  <tabstop>pushButton_Grab</tabstop>
+  <tabstop>radioButton_MilliMeter</tabstop>
+  <tabstop>radioButton_Meter</tabstop>
+  <tabstop>pushButton_getPose</tabstop>
+  <tabstop>pushButton_setPose</tabstop>
+  <tabstop>pushButton_resetPose</tabstop>
+  <tabstop>pushButton_savePose</tabstop>
+  <tabstop>pushButton_registerPose</tabstop>
+  <tabstop>spinBox_registerPose</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="buttonGroup_PipeLine"/>
+  <buttongroup name="buttonGroup_Unity"/>
+ </buttongroups>
+</ui>

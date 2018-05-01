@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Registration_CorrespondenceEstimation</class>
+ <widget class="QWidget" name="Registration_CorrespondenceEstimation">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>438</width>
+    <height>272</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <item>
+    <widget class="QRadioButton" name="Registration_Base">
+     <property name="text">
+      <string>Base</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">Registration_ButtonGroup_CorrispondenceEstimation</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="QRadioButton" name="Registration_BackProjection">
+     <property name="text">
+      <string>BackProjection</string>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">Registration_ButtonGroup_CorrispondenceEstimation</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="QRadioButton" name="Registration_NormalShooting">
+     <property name="statusTip">
+      <string extracomment="computes correspondences as points in the target cloud which have minimum distance to normals computed on the input cloud"/>
+     </property>
+     <property name="text">
+      <string>NormalShooting</string>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">Registration_ButtonGroup_CorrispondenceEstimation</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="QRadioButton" name="Registration_OrganizedProjection">
+     <property name="text">
+      <string>OrganizedProjection</string>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">Registration_ButtonGroup_CorrispondenceEstimation</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="checkBox_Reciprok">
+     <property name="text">
+      <string>Reciprok</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="Registration_ButtonGroup_CorrispondenceEstimation"/>
+ </buttongroups>
+</ui>

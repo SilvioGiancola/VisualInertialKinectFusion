@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Registration_Keypoints</class>
+ <widget class="QWidget" name="Registration_Keypoints">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>453</width>
+    <height>628</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="7" column="2">
+    <widget class="QPushButton" name="pushButton_Elaboration_All_PC">
+     <property name="text">
+      <string>Elaboration All PC</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1" colspan="2">
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>130</height>
+      </size>
+     </property>
+     <property name="title">
+      <string>Features</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="1" column="0">
+       <widget class="QComboBox" name="comboBox_FeaturesType">
+        <item>
+         <property name="text">
+          <string>BRISK</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>AGAST</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>SIFT3D</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="label_6">
+        <property name="text">
+         <string>Param Threshold:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QSpinBox" name="spinBox_threshold_Detector">
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="value">
+         <number>30</number>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QComboBox" name="comboBox_DescriptorType">
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <item>
+         <property name="text">
+          <string>Points</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>PFH</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>FPFH</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>PFHRGB</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>SHOT</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>SHOTRGB</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="1" colspan="2">
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>80</height>
+      </size>
+     </property>
+     <property name="title">
+      <string>PointClouds</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="1" column="1">
+       <widget class="QComboBox" name="comboBox_PC_to_Align"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>PC to Align</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="comboBox_Model"/>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Model</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="7" column="1">
+    <widget class="QPushButton" name="pushButton">
+     <property name="text">
+      <string>Elaboration</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="2">
+    <widget class="QGroupBox" name="Registration_TransformationEstimation">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>160</height>
+      </size>
+     </property>
+     <property name="title">
+      <string>TransformationEstimation</string>
+     </property>
+     <layout class="QFormLayout" name="formLayout_4">
+      <item row="0" column="0">
+       <widget class="QRadioButton" name="Registration_SVD">
+        <property name="text">
+         <string>SVD</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">Registration_ButtonGroup_TransformationEstimation</string>
+        </attribute>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QRadioButton" name="Registration_LM">
+        <property name="text">
+         <string>LM</string>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">Registration_ButtonGroup_TransformationEstimation</string>
+        </attribute>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QRadioButton" name="Registration_Point2Plane">
+        <property name="text">
+         <string>Point2Plane</string>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">Registration_ButtonGroup_TransformationEstimation</string>
+        </attribute>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QRadioButton" name="Registration_Point2PlaneLLS">
+        <property name="text">
+         <string>Point2PlaneLLS</string>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">Registration_ButtonGroup_TransformationEstimation</string>
+        </attribute>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QRadioButton" name="Registration_TranslationOnly">
+        <property name="text">
+         <string>TranslationOnly</string>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">Registration_ButtonGroup_TransformationEstimation</string>
+        </attribute>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="Registration_ButtonGroup_TransformationEstimation"/>
+ </buttongroups>
+</ui>

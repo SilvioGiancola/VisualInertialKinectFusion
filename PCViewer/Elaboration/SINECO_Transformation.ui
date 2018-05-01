@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SINECO_Transformation</class>
+ <widget class="QWidget" name="SINECO_Transformation">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>460</width>
+    <height>423</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QFormLayout" name="formLayout">
+   <item row="0" column="0">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Transformation</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_5">
+      <item row="0" column="1">
+       <widget class="QGroupBox" name="Transform_gB_Trans">
+        <property name="title">
+         <string>Small Translation Offset</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="2" column="0">
+          <widget class="QPushButton" name="Transform_Tyneg">
+           <property name="text">
+            <string>Ty-</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QDoubleSpinBox" name="Transform_TStep">
+           <property name="decimals">
+            <number>3</number>
+           </property>
+           <property name="minimum">
+            <double>0.000000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>10.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.010000000000000</double>
+           </property>
+           <property name="value">
+            <double>0.100000000000000</double>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QPushButton" name="Transform_Typos">
+           <property name="text">
+            <string>Ty+</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>Step (m)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QPushButton" name="Transform_Txpos">
+           <property name="text">
+            <string>Tx+</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QPushButton" name="Transform_Tzneg">
+           <property name="text">
+            <string>Tz-</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QPushButton" name="Transform_Tzpos">
+           <property name="text">
+            <string>Tz+</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QPushButton" name="Transform_Txneg">
+           <property name="text">
+            <string>Tx-</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QRadioButton" name="Transform_GlobalRefSyst">
+        <property name="text">
+         <string>Global Ref Syst</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">Transform_RefSystButtonGroup</string>
+        </attribute>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QRadioButton" name="Transform_LocalRefSyst">
+        <property name="text">
+         <string>Current Ref Syst</string>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">Transform_RefSystButtonGroup</string>
+        </attribute>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QGroupBox" name="Transform_gB_Rot">
+        <property name="title">
+         <string>Small Rot Offset</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="1" column="0">
+          <widget class="QPushButton" name="Transform_Ryneg">
+           <property name="text">
+            <string>Ry-</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QPushButton" name="Transform_Rxneg">
+           <property name="text">
+            <string>Rx-</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QPushButton" name="Transform_Rzpos">
+           <property name="text">
+            <string>Rz+</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QPushButton" name="Transform_Rzneg">
+           <property name="text">
+            <string>Rz-</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QPushButton" name="Transform_Rypos">
+           <property name="text">
+            <string>Ry+</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="Transform_Rxpos">
+           <property name="text">
+            <string>Rx+</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QDoubleSpinBox" name="Transform_RStep">
+           <property name="decimals">
+            <number>0</number>
+           </property>
+           <property name="minimum">
+            <double>0.000000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>180.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>5.000000000000000</double>
+           </property>
+           <property name="value">
+            <double>20.000000000000000</double>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>Step (deg)</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QCheckBox" name="checkBox_ALL">
+        <property name="text">
+         <string>Apply to all</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="2">
+    <widget class="QGroupBox" name="Transform_gB_Matrix">
+     <property name="title">
+      <string>Transformation Matrix</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="1" column="0">
+       <widget class="QPushButton" name="Transform_setMat">
+        <property name="text">
+         <string>Set Mat</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" colspan="2">
+       <widget class="TransformationMatrixSpinBox" name="Transform_RT" native="true"/>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="Transform_getMat">
+        <property name="text">
+         <string>Get Mat</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QPushButton" name="Transform_reset">
+        <property name="text">
+         <string>Reset Trans</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QPushButton" name="Transform_solidify">
+        <property name="text">
+         <string>Solidify Transformation</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QPushButton" name="Transform_demean">
+        <property name="text">
+         <string>Demean</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>TransformationMatrixSpinBox</class>
+   <extends>QWidget</extends>
+   <header>Widgets/transformationmatrixspinbox.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>Transform_Rxneg</tabstop>
+  <tabstop>Transform_Rxpos</tabstop>
+  <tabstop>Transform_Ryneg</tabstop>
+  <tabstop>Transform_Rypos</tabstop>
+  <tabstop>Transform_Rzneg</tabstop>
+  <tabstop>Transform_Rzpos</tabstop>
+  <tabstop>Transform_Txneg</tabstop>
+  <tabstop>Transform_Txpos</tabstop>
+  <tabstop>Transform_Tyneg</tabstop>
+  <tabstop>Transform_Typos</tabstop>
+  <tabstop>Transform_Tzneg</tabstop>
+  <tabstop>Transform_Tzpos</tabstop>
+  <tabstop>Transform_RStep</tabstop>
+  <tabstop>Transform_TStep</tabstop>
+  <tabstop>Transform_GlobalRefSyst</tabstop>
+  <tabstop>Transform_LocalRefSyst</tabstop>
+  <tabstop>Transform_setMat</tabstop>
+  <tabstop>Transform_getMat</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="Transform_RefSystButtonGroup"/>
+ </buttongroups>
+</ui>

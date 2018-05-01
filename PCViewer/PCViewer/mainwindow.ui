@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>992</width>
+    <height>479</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="1">
+     <widget class="QVTKWidget" name="qvtkWidget" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionLoad_PointCloud"/>
+   <addaction name="actionSave_PointCloud"/>
+   <addaction name="actionSaveAll"/>
+   <addaction name="actionBinaryMode"/>
+   <addaction name="actionSaveNormal"/>
+   <addaction name="separator"/>
+   <addaction name="actionCopy_PointCloud"/>
+   <addaction name="actionRemove_PointCloud"/>
+   <addaction name="actionRemoveAll"/>
+   <addaction name="separator"/>
+   <addaction name="actionHideAll"/>
+   <addaction name="actionShowAll"/>
+   <addaction name="separator"/>
+   <addaction name="actionMerge_All"/>
+   <addaction name="actionShowSelectedPointCloud"/>
+   <addaction name="separator"/>
+   <addaction name="actionShowRefSystem"/>
+   <addaction name="actionShowGround"/>
+   <addaction name="actionTestPCLPlotter"/>
+   <addaction name="actionPointSelection"/>
+   <addaction name="actionExportPoses"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QDockWidget" name="dockWidget_PointCloudList">
+   <property name="minimumSize">
+    <size>
+     <width>300</width>
+     <height>121</height>
+    </size>
+   </property>
+   <property name="windowTitle">
+    <string>Point Cloud List</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="0">
+      <widget class="QTreeView" name="CloudListView">
+       <attribute name="headerDefaultSectionSize">
+        <number>150</number>
+       </attribute>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget_Kinect">
+   <property name="windowTitle">
+    <string>Kinect2</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_Kinect">
+    <property name="accessibleName">
+     <string>KinectV2</string>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_3">
+     <item row="0" column="0">
+      <widget class="QToolBox" name="KintoolBox">
+       <widget class="KinectTab" name="EmptyKinect">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>141</width>
+          <height>318</height>
+         </rect>
+        </property>
+        <attribute name="label">
+         <string>No Kinect V2 found</string>
+        </attribute>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget_UndoStack">
+   <property name="minimumSize">
+    <size>
+     <width>308</width>
+     <height>156</height>
+    </size>
+   </property>
+   <property name="windowTitle">
+    <string>Undo Stack</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_3">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QUndoView" name="UndoStackView"/>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="pushButton_ClearUndoStack">
+         <property name="text">
+          <string>Clear Stack</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Undo Limit (0=inf)</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="spinBox_UndoLimit"/>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>992</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionLoad_PointCloud"/>
+    <addaction name="actionSave_PointCloud"/>
+    <addaction name="actionRemove_PointCloud"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuWindow">
+    <property name="title">
+     <string>Window</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuElaborattion">
+    <property name="title">
+     <string>Elaboration</string>
+    </property>
+    <widget class="QMenu" name="menuFilters">
+     <property name="title">
+      <string>Filters</string>
+     </property>
+    </widget>
+    <widget class="QMenu" name="menuRegistration">
+     <property name="title">
+      <string>Registration</string>
+     </property>
+    </widget>
+    <widget class="QMenu" name="menuRecognition">
+     <property name="title">
+      <string>Recognition</string>
+     </property>
+    </widget>
+    <addaction name="menuFilters"/>
+    <addaction name="menuRegistration"/>
+    <addaction name="menuRecognition"/>
+   </widget>
+   <widget class="QMenu" name="menuKinect">
+    <property name="title">
+     <string>KinectV2</string>
+    </property>
+    <addaction name="actionSyncOpen"/>
+    <addaction name="actionSyncClose"/>
+    <addaction name="actionSyncGrab"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuElaborattion"/>
+   <addaction name="menuKinect"/>
+   <addaction name="menuWindow"/>
+  </widget>
+  <action name="actionLoad_PointCloud">
+   <property name="icon">
+    <iconset resource="../Icon/Icon.qrc">
+     <normaloff>:/Images/Open.png</normaloff>:/Images/Open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Load Cloud</string>
+   </property>
+   <property name="toolTip">
+    <string>Load a Point Cloud</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionRemove_PointCloud">
+   <property name="icon">
+    <iconset resource="../Icon/Icon.qrc">
+     <normaloff>:/Images/Trash.png</normaloff>:/Images/Trash.png</iconset>
+   </property>
+   <property name="text">
+    <string>Remove PointCloud</string>
+   </property>
+   <property name="toolTip">
+    <string>Remove the current Point Cloud</string>
+   </property>
+  </action>
+  <action name="actionSave_PointCloud">
+   <property name="icon">
+    <iconset resource="../Icon/Icon.qrc">
+     <normaloff>:/Images/Save.png</normaloff>:/Images/Save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save Cloud</string>
+   </property>
+   <property name="toolTip">
+    <string>Save the current Point Cloud</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionBinaryMode">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Icon/Icon.qrc">
+     <normaloff>:/Images/Binary.png</normaloff>:/Images/Binary.png</iconset>
+   </property>
+   <property name="text">
+    <string>BinaryMode</string>
+   </property>
+   <property name="toolTip">
+    <string>Save Point Cloud in Binary Mode</string>
+   </property>
+  </action>
+  <action name="actionSyncGrab">
+   <property name="text">
+    <string>SyncGrab</string>
+   </property>
+   <property name="toolTip">
+    <string>SyncGrab</string>
+   </property>
+  </action>
+  <action name="actionSyncOpen">
+   <property name="text">
+    <string>SyncOpen</string>
+   </property>
+   <property name="toolTip">
+    <string>SyncOpen</string>
+   </property>
+  </action>
+  <action name="actionSyncClose">
+   <property name="text">
+    <string>SyncClose</string>
+   </property>
+   <property name="toolTip">
+    <string>SyncClose</string>
+   </property>
+  </action>
+  <action name="actionRemoveAll">
+   <property name="icon">
+    <iconset resource="../Icon/Icon.qrc">
+     <normaloff>:/Images/Trash_All.png</normaloff>:/Images/Trash_All.png</iconset>
+   </property>
+   <property name="text">
+    <string>RemoveAll</string>
+   </property>
+   <property name="toolTip">
+    <string>RemoveAll</string>
+   </property>
+  </action>
+  <action name="actionHideAll">
+   <property name="icon">
+    <iconset resource="../Icon/Icon.qrc">
+     <normaloff>:/Images/Hide.png</normaloff>:/Images/Hide.png</iconset>
+   </property>
+   <property name="text">
+    <string>HideAll</string>
+   </property>
+   <property name="toolTip">
+    <string>HideAll</string>
+   </property>
+  </action>
+  <action name="actionShowAll">
+   <property name="icon">
+    <iconset resource="../Icon/Icon.qrc">
+     <normaloff>:/Images/Show.png</normaloff>:/Images/Show.png</iconset>
+   </property>
+   <property name="text">
+    <string>ShowAll</string>
+   </property>
+   <property name="toolTip">
+    <string>Show All the point cloud in the list</string>
+   </property>
+  </action>
+  <action name="actionShowRefSystem">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Icon/Icon.qrc">
+     <normaloff>:/Images/Ref_Syst.png</normaloff>:/Images/Ref_Syst.png</iconset>
+   </property>
+   <property name="text">
+    <string>ShowRefSystem</string>
+   </property>
+   <property name="toolTip">
+    <string>Show the main Reference System</string>
+   </property>
+  </action>
+  <action name="actionCopy_PointCloud">
+   <property name="icon">
+    <iconset resource="../Icon/Icon.qrc">
+     <normaloff>:/Images/Copy.png</normaloff>:/Images/Copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>Copy_PointCloud</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionShowSelectedPointCloud">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>ShowSelectedPointCloud</string>
+   </property>
+   <property name="toolTip">
+    <string>Show the Selected Point Cloud</string>
+   </property>
+  </action>
+  <action name="actionSaveAll">
+   <property name="icon">
+    <iconset resource="../Icon/Icon.qrc">
+     <normaloff>:/Images/Save_All.png</normaloff>:/Images/Save_All.png</iconset>
+   </property>
+   <property name="text">
+    <string>SaveAll</string>
+   </property>
+  </action>
+  <action name="actionMerge_All">
+   <property name="text">
+    <string>Merge All</string>
+   </property>
+   <property name="toolTip">
+    <string>Merge all the point cloud in a single point cloud</string>
+   </property>
+  </action>
+  <action name="actionTestPCLPlotter">
+   <property name="icon">
+    <iconset resource="../Icon/Icon.qrc">
+     <normaloff>:/Images/Plot.png</normaloff>:/Images/Plot.png</iconset>
+   </property>
+   <property name="text">
+    <string>testPCLPlotter</string>
+   </property>
+   <property name="toolTip">
+    <string>Test for PCL Plotter</string>
+   </property>
+  </action>
+  <action name="actionPointSelection">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>PointSelection</string>
+   </property>
+   <property name="toolTip">
+    <string>Enable Point Selection</string>
+   </property>
+  </action>
+  <action name="actionShowGround">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Icon/Icon.qrc">
+     <normaloff>:/Images/Ground.png</normaloff>:/Images/Ground.png</iconset>
+   </property>
+   <property name="text">
+    <string>ShowGround</string>
+   </property>
+   <property name="toolTip">
+    <string>Show the Ground</string>
+   </property>
+  </action>
+  <action name="actionExportPoses">
+   <property name="text">
+    <string>exportPoses</string>
+   </property>
+  </action>
+  <action name="actionSaveNormal">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Icon/Icon.qrc">
+     <normaloff>:/Images/Normal.png</normaloff>:/Images/Normal.png</iconset>
+   </property>
+   <property name="text">
+    <string>SaveNormal</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QVTKWidget</class>
+   <extends>QWidget</extends>
+   <header>QVTKWidget.h</header>
+   <container>1</container>
+   <slots>
+    <slot>setEnable(int)</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>KinectTab</class>
+   <extends>QWidget</extends>
+   <header>PCViewer/kinecttab.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QUndoView</class>
+   <extends>QListView</extends>
+   <header>qundoview.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../Icon/Icon.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/Images">
+        <file>Save.png</file>
+        <file>Open.png</file>
+        <file>Trash.png</file>
+        <file>Copy.png</file>
+        <file>Hide.png</file>
+        <file>Save_All.png</file>
+        <file>Show.png</file>
+        <file>Trash_All.png</file>
+        <file>Ref_Syst.png</file>
+        <file>Ground.png</file>
+        <file>Binary.png</file>
+        <file>Plot.png</file>
+        <file>Normal.png</file>
+    </qresource>
+</RCC>
