@@ -3,10 +3,14 @@ Integration of Absolute Orientation Measurements in the KinectFusion Reconstruct
 
 
 
-need VTK 6.2, Boost1.58, Eigen3, FLANN, Qt5.9
-identify the architecture of your GPU
+tested with:
+ - VTK 6.2, 
+ - Boost 1.58, 
+ - Eigen 3,
+ - FLANN,
+ - Qt5.9
 
-# install a modified version of PCL
+## Install a modified version of PCL
 ```
 mkdir pcl-build && cd pcl-build/
 cmake -DBUILD_GPU=ON -DBUILD_CUDA=ON -DWITH_QT=OFF ../pcl
@@ -16,7 +20,7 @@ cd ..
 ```
 
 
-# install s odified version of PCViewer
+## Install s odified version of PCViewer
 ```
 mkdir PCViewer-build && cd PCViewer-build
 cmake ../PCViewer
@@ -26,7 +30,7 @@ cd ..
 
 
 
-# create dataset
+## Create dataset
  - Download the sequences from the [freiburg dataset](https://vision.in.tum.de/data/datasets/rgbd-dataset/download)
  - Extract the sequences into the data folder
  - Activate the conda environment 
@@ -38,7 +42,8 @@ cd ..
  `mkdir pointclouds && python generate_registered_pointcloud_organized.py rgb.txt depth.txt groundtruth.txt pointclouds/PC --pcd_format` 
  cd ../..
 
-# run Kinect Fusion
+## Run Kinect Fusion
+```
 cd PCViewer
 ./testKinFuGUI
-
+```
