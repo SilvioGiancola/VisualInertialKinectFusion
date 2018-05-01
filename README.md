@@ -3,12 +3,12 @@ Integration of Absolute Orientation Measurements in the KinectFusion Reconstruct
 
 
 
-tested with:
+Tested with:
  - VTK 6.2, 
  - Boost 1.58, 
  - Eigen 3,
  - FLANN,
- - Qt5.9
+ - Qt 5.9
 
 ## Install a modified version of PCL
 ```
@@ -20,7 +20,7 @@ cd ..
 ```
 
 
-## Install s odified version of PCViewer
+## Install a modified version of PCViewer
 ```
 mkdir PCViewer-build && cd PCViewer-build
 cmake ../PCViewer
@@ -46,4 +46,18 @@ cd ..
 ```
 cd PCViewer
 ./testKinFuGUI
+```
+
+## Paper
+CVPR Workshop on Visual Odometry and Computer Vision Applications Based on Location Clues 2018
+
+Available at [https://arxiv.org/abs/1802.03980](https://arxiv.org/abs/1802.03980)
+
+```
+@article{giancola2018integration,
+  title={Integration of Absolute Orientation Measurements in the KinectFusion Reconstruction pipeline},
+  author={Giancola, Silvio and Schneider, Jens and Wonka, Peter and Ghanem, Bernard S},
+  journal={arXiv preprint arXiv:1802.03980},
+  year={2018}
+}
 ```
