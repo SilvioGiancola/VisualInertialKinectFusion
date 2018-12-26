@@ -1,6 +1,14 @@
-# VisualInertialKinectFusion
-Integration of Absolute Orientation Measurements in the KinectFusion Reconstruction pipeline
+# Integration of Absolute Orientation Measurements in the KinectFusion Reconstruction Pipeline
 
+```
+@InProceedings{Giancola_2018_CVPR_Workshops,
+  author = {Giancola, Silvio and Schneider, Jens and Wonka, Peter and Ghanem, Bernard S.},
+  title = {Integration of Absolute Orientation Measurements in the KinectFusion Reconstruction Pipeline},
+  booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+  month = {June},
+  year = {2018}
+}
+```
 
 
 Tested with:
