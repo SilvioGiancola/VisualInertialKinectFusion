@@ -1,6 +1,6 @@
 # Integration of Absolute Orientation Measurements in the KinectFusion Reconstruction Pipeline
 
-CVPR Workshop on Visual Odometry and Computer Vision Applications Based on Location Clues 2018
+CVPR'18 Workshop on Visual Odometry and Computer Vision Applications Based on Location Clues
 
 Available at [openaccess.thecvf.com](http://openaccess.thecvf.com/content_cvpr_2018_workshops/papers/w30/Giancola_Integration_of_Absolute_CVPR_2018_paper.pdf)
 
@@ -13,6 +13,7 @@ Available at [openaccess.thecvf.com](http://openaccess.thecvf.com/content_cvpr_2
   year = {2018}
 }
 ```
+
 # Implementation
 
 Tested with:
